@@ -47,22 +47,22 @@ const banned = JSON.parse(fs.readFileSync('./baseikal/dbnye/banned.json'))
 // Time & Date
 const time2 = moment().tz('Asia/Jakarta').format('HH:mm:ss')
 if(time2 < "23:59:00"){
-var ucapanWaktu = 'Selamat Malam'
+var ucapanWaktu = 'Selamat Malam 💤'
 }
 if(time2 < "19:00:00"){
-var ucapanWaktu = 'Selamat Petang'
+var ucapanWaktu = 'Selamat Petang 💤'
  }
 if(time2 < "18:00:00"){
-var ucapanWaktu = 'Selamat Sore'
+var ucapanWaktu = 'Selamat Sore 💦'
  }
 if(time2 < "15:00:00"){
-var ucapanWaktu = 'Selamat Siang'
+var ucapanWaktu = 'Selamat Siang 😎'
  }
 if(time2 < "11:00:00"){
-var ucapanWaktu = 'Selamat Pagi'
+var ucapanWaktu = 'Selamat Pag 🤓i'
  }
 if(time2 < "05:00:00"){
-var ucapanWaktu = 'Selamat Malam'
+var ucapanWaktu = 'Selamat Malam 💤'
  }
 //=================================================//
 module.exports = haikal = async (haikal, m, chatUpdate, store) => {
@@ -145,6 +145,52 @@ haikal.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title
 const reply = (teks) => {
 return haikal.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": `SC ꪶ🌷ꫂ ALDI MODER ꪶ🌷ꫂ`,"body": `Selamat ${salam} kak ${pushname}`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": kalimage,"sourceUrl": `https://youtube.com/c/HwModsWa857`}}}, { quoted: hw })
 } 
+break
+case 'poll v2': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+var pollCreation = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+"pollCreationMessage": {
+"name": "AldSlebeww Best 2010🔥",
+"options": [
+	{
+"optionName": "MODAL WA DOWNLOAD"
+	},
+	{
+"optionName": "SOK SOK AN"
+	},
+	{
+"optionName": "WAR 😂🤙"
+	},
+	{
+"optionName": "Hadehh😂"
+	},
+	{
+"optionName": "AldSlebeww 💤"
+	}
+],
+"selectableOptionsCount": 5
+	}
+}), { userJid: m.chat, quoted: doc })
+haikal.relayMessage(m.chat, pollCreation.message, { messageId: pollCreation.key.id })
+deploy('sukses sendbug')
+}
+break
+case 'bugbokep':{
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
+dwhe = await getBuffer(`https://raku-web.herokuapp.com/api/bokep?apikey=RakuKeyTod`)
+haikal.sendMessage(m.chat, { video: dwhe, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Nih Bokep Nya` }, { quoted: doc })
+}
+break
+case 'bugbokep2':{
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+if (!isRegistered) return replyReg(mess.verif)
+dwhee = await getBuffer(`https://raku-web.herokuapp.com/api/bokep?apikey=RakuKeyTod`)
+haikal.sendMessage(m.chat, { video: dwhee, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `ALDI-SLEBEWW𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦𑜦` }, { quoted: doc })
+}
 //=================================================//
 const deploy = (teks) => {
   haikal.relayMessage(m.chat, { requestPaymentMessage: { Message: { extendedTextMessage: { text: teks, currencyCodeIso4217: 'IDR', requestFrom: '0@s.whatsapp.net', expiryTimestamp: 8000, amount: 1, background: thumb }}}}, {})
@@ -350,6 +396,18 @@ case 'inibug': {
 if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 let teks = `══✪〘 *BANG INI BUG ? ☺️* 〙✪══
+ ➲ *Pesan : ${q ? q : 'kosong'}*\n\n`
+for (let mem of participants) {
+teks += `⭔ @${mem.id.split('@')[0]}\n`
+}
+haikal.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: doc })
+}
+break
+//============================================//======
+case 'bugtag by aldigans': {
+if (!isCreator) return
+if (isBan) throw sticBanLu(from)
+let teks = `BUG TAG
  ➲ *Pesan : ${q ? q : 'kosong'}*\n\n`
 for (let mem of participants) {
 teks += `⭔ @${mem.id.split('@')[0]}\n`
@@ -3556,7 +3614,7 @@ if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 
 haikal.public = true
-reply('Sukse Change To Public')
+reply('SUDAH PUBLIC BOS KU🗿🤙')
 }
 break
 //=================================================//
@@ -3565,7 +3623,7 @@ if (!isCreator) return
 if (isBan) throw sticBanLu(from)
 
 haikal.public = false
-reply('Sukses Change To Self')
+reply('SUDAH SELF BOS KU🗿🤙')
 }
 break
 //=================================================//
@@ -3671,7 +3729,7 @@ break
 case 'speedtest': {
 if (isBan) throw sticBanLu(from)
 
-reply('Testing Speed...')
+reply('Testing Speed ㄣ ')
 let cp = require('child_process')
 let { promisify } = require('util')
 let exec = promisify(cp.exec).bind(cp)
@@ -3805,34 +3863,35 @@ Hay Kak ${pushname} 👋 Selamat ${salam}
 ◎ Lib : Multi-Device
 ◎ Terbit : *01-09-1999*
 
-[ 🇲🇨 Ini adalah Bot Pribadi  Dari Indonesia 👋 ]
+[ YT ALDI-SLEBEWW 0911 ]
+
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 *MENU*
 ┏━━⊱ 
-┣❏➥ bot
-┣❏➥ scraperimage
-┣❏➥ asupanmata
-┣❏➥ scrapconvert
-┣❏➥ bugmenu
-┣❏➥ randomsound
-┣❏➥ nsfw
-┣❏➥ soundbot
-┣❏➥ funnmenu
-┣❏➥ primbonmenu
-┣❏➥ islamiyah
-┣❏➥ voicechanger
-┣❏➥ beritanews
-┣❏➥ cmdmenu
-┣❏➥ searchmenu
-┣❏➥ groupmenu
-┣❏➥ downloadmenu
-┣❏➥ ownermenu
+┣ㄣﾀ bot
+┣ㄣﾀ scraperimage
+┣ㄣﾀ asupanmata
+┣ㄣﾀ scrapconvert
+┣ㄣﾀ bugmenu
+┣ㄣﾀ randomsound
+┣ㄣﾀ nsfw
+┣ㄣﾀ soundbot
+┣ㄣﾀ funnmenu
+┣ㄣﾀ primbonmenu
+┣ㄣﾀ islamiyah
+┣ㄣﾀ voicechanger
+┣ㄣﾀ beritanews
+┣ㄣﾀ cmdmenu
+┣ㄣﾀ searchmenu
+┣ㄣﾀ groupmenu
+┣ㄣﾀ downloadmenu
+┣ㄣﾀ ownermenu
 ┗━━⊱
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 *NOTE*
 🌷
-contact me Wa.me/6285692491781
+contact me Wa.me/6285697175057
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 Base Script
 ©ꪶ🌷ꫂ ALDI MODER ꪶ🌷ꫂ`,
@@ -3905,7 +3964,7 @@ cantik
 kesel
 ngeselin
 🌷
-contact me Wa.me/6285692491781
+contact me Wa.me/6285697175057
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 Base Script
 ©ꪶ🌷ꫂ ALDI MODER ꪶ🌷ꫂ`,
@@ -3955,7 +4014,7 @@ holoh
 delttt
 suitpvp [@tag]
 🌷
-contact me Wa.me/6285692491781
+contact me Wa.me/6285697175057
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 Base Script
 © ꪶ🌷ꫂ ALDI MODER ꪶ🌷ꫂ`,
@@ -3986,7 +4045,7 @@ Hay Kak ${pushname} 👋 Selamat ${salam}
  ▬▭▬▭▬ ✦✧✦ ▬▭▬▭▬
 ╭━━•›
 │➳ Subscribe Channel
-│➳ YT ꪶ🌷ꫂ ALDI MODER ꪶ🌷ꫂ
+│➳ YT ALDI-SLEBEWW 0911
 │➳ https://youtube.com/channel/UChFZKTnCKkzqkaCZQYsyDQg
 ╰━ ━ ━ ━ ━ ━ ━ ━ ━ ━•⩵꙰ཱི࿐
  ▬▭▬▭▬ ✦✧✦ ▬▭▬▭▬
@@ -4016,7 +4075,9 @@ bug5 [ bug mentions ]
 bug6 [ bug mentions ]
 bug7 [ bug mentions ]
 poll [ polling ]
+poll v2 [ polling v2 ]
 inibug [ Bug Tagall ]
+bugtag by aldigans [ Bug Tagall ]
 hiya [ Bug Document ]
 lokas [ Bug Live Lokasi ]
 catalog [ Bug Catalog ]
@@ -4026,6 +4087,7 @@ duc [ document ]
 ducu [ document ]
 troli [ Bug Troli ]
 troli2 [ Bug Troli 2 ]
+bugbokep [ pasti lu tau lah ]
 
 [ ꪶ🌷ꫂ JADI BUG ꪶ🌷ꫂ ]
 
@@ -4051,7 +4113,7 @@ ampas2 [Contoh : Ampas2 112674448xxx ]
 catalogpc [ Contoh : catalogpc 628xxx@s.whatsapp.net|10|10s ]
 cataloggc [ Contoh : cataloggc 1237891xxxx@g.us|10|10s ]
 🌷
-contact me Wa.me/6285692491781
+contact me Wa.me/6285697175057
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 Base Script
 © ꪶ🌷ꫂ ALDI MODER ꪶ🌷ꫂ`,
@@ -4595,7 +4657,7 @@ darkjoke
 meme
 meme2
 [ NOTE BASE BY HW MODS ] 
-contact me Wa.me/6285692491781
+contact me Wa.me/6285697175057
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 © ꪶ🌷ꫂ ALDI MODER ꪶ🌷ꫂ`,
 }
